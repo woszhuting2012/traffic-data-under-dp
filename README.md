@@ -34,29 +34,37 @@ MAX_TRA: Maximum trajectory length.
 
 Make parameters effective:
 ```
-python3 global DPinit.py
+python3 global DP/init.py
 ```
 
 2. Export the trajectory data from SUMO:
 
 ```
-python3 Trajectory_Generation.py
+python3 global DP/Trajectory_Generation.py
 ```
 
 3. Add the noisy to data:
 
 ```
-python3 Noise_Addition.py
+python3 global DP/Noise_Addition.py
 ```
 
 4. Generate the matrix and get experiment result:
 ```
-pyhton3 Matrix_Result_Geeneration.py
+pyhton3 global DP/Matrix_Result_Geeneration.py
 ```
 
 ### Local DP
 1.Experiment parameters setting:
 
 Set the same parameters as Global DP
+
 ```
-python3 
+python3 local DP/init.py
+```
+
+2. Get the experiment result:
+
+```
+python3 local DP/optRR.py
+```
