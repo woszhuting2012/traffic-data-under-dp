@@ -17,8 +17,8 @@ Pasubio: https://github.com/DLR-TS/sumo-scenarios/tree/main/bologna/](https://gi
 ```
 ## Usage
 
-### Local DP
-1. Experiment parameters setting in init.py
+### Global DP
+1. Experiment parameters setting:
 
 EPSILON: Privacy budget.
 
@@ -34,7 +34,7 @@ MAX_TRA: Maximum trajectory length.
 
 Make parameters effective:
 ```
-python3 init.py
+python3 global DPinit.py
 ```
 
 2. Export the trajectory data from SUMO:
@@ -48,3 +48,15 @@ python3 Trajectory_Generation.py
 ```
 python3 Noise_Addition.py
 ```
+
+4. Generate the matrix and get experiment result:
+```
+pyhton3 Matrix_Result_Geeneration.py
+```
+
+### Local DP
+1.Experiment parameters setting:
+
+Set the same parameters as Global DP
+```
+python3 
