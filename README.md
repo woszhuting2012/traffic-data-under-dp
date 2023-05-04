@@ -19,11 +19,17 @@ Pasubio: https://github.com/DLR-TS/sumo-scenarios/tree/main/bologna/](https://gi
 
 ### Local DP
 1. Experiment parameters setting in init.py
+
 EPSILON: Privacy budget.
+
 START_TIME, END_TIME: Statistics of the start and end time points of vehicles.
+
 block_x, block_y, UNIT_LEN: The position and size of district.
+
 NET_NAME: Name of network, 'bolognaringway' and 'pasubio' are available in our experiments.
+
 TIMESTEP: Timeslot of experiment. We set it to 450s in experiments.
+
 MAX_TRA: Maximum trajectory length.
 
 Make parameters effective:
