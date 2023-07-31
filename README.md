@@ -9,11 +9,11 @@ Install SUMO from:
 https://sumo.dlr.de/docs/TraCI.html
 ```
 
-Download nerwork and route file from :
+Download nerwork and route file into folder Datasets from :
 ```
 Bologna: http://www.cs.unibo.it/projects/bolognaringway/
 
-Pasubio: https://github.com/DLR-TS/sumo-scenarios/tree/main/bologna/](https://github.com/DLR-TS/sumo-scenarios/tree/main/bologna/pasubio
+Berlin: https://github.com/mosaic-addons/best-scenario
 ```
 ## Usage
 
@@ -22,15 +22,11 @@ Pasubio: https://github.com/DLR-TS/sumo-scenarios/tree/main/bologna/](https://gi
 
 EPSILON: Privacy budget.
 
-START_TIME, END_TIME: Statistics of the start and end time points of vehicles.
-
-block_x, block_y, UNIT_LEN: The position and size of district.
+START_TIME: Statistics of the start time points of trajectories.
 
 NET_NAME: Name of network, 'bolognaringway' and 'pasubio' are available in our experiments.
 
-TIMESTEP: Timeslot of experiment. We set it to 450s in experiments.
-
-MAX_TRA: Maximum trajectory length.
+TIMESTEP: Timeslot of experiment.
 
 Make parameters effective:
 ```
@@ -62,8 +58,12 @@ Set the same parameters as Global DP
 ```
 python3 local DP/init.py
 ```
+2. Export the trajectory data from SUMO:
 
-2. Get the experiment result:
+```
+python3 local DP/Trajectory_Generation.py
+```
+3. Get the experiment result:
 
 ```
 python3 local DP/optRR.py
